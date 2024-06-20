@@ -27,6 +27,7 @@ body {
   .logo img {
    max-width: 120px;
    height: auto;
+   
   }
  
   .navmenu {
@@ -71,4 +72,7 @@ body {
   flex-direction: column;
   row-gap: 20px;
 
+}
+.about-image img {
+ width: 50%;
 }
