@@ -52,12 +52,55 @@ body {
 
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .btn-1 {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: brown;
+ 
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  margin-left: 10px;
+  border: 2px solid brown; /* Added border */
+}
+
+
+.header-right .btn-2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: brown;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.header-right .btn-2 span {
+  color: #2c2c2c;
+  margin-left: 5px;
+}
+
 /* Style for hero section */
 #hero {
   background-image: url(../Assets/Images/bakery\ hero.jpg);
   width: 100vw;
   height: 100vh;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
 
 }
 
@@ -65,12 +108,52 @@ body {
   height: 100%;
   width: 100%;
   color: rgb(255, 255, 255);
-  align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+ 
+  padding-left: 50px;
+  
+}
 
+#hero-overlay header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#subtext-one {
+  font-size: 3em;
+ 
+  margin-bottom: 10px;
+  
+}
+
+#subtext-two {
+  font-size: 1.5em;
+ 
+  max-width: 600px;
+  /* Limit the width for better readability */
+}
+
+.menu-button {
+  font-size: 1.5em;
+  /* Increase button font size */
+  padding: 15px 30px;
+  /* Adjust button padding */
+  margin-top: 20px;
+  /* Space between paragraph and button */
+  background-color: #fff;
+  color: #614034;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #f0f0f0;
 }
 
 .about-image img {
@@ -107,20 +190,20 @@ body {
   font-family: 'Baskervville', serif;
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #333;
+  color: #614034;
 }
 
 .about-text h3.Baskervville {
   font-family: 'Baskervville', serif;
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: #555;
+  color: #614034;
 }
 
 .about-text p.Roboto {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #666;
+  color: #614034;
 }
 
 @media (max-width: 768px) {
@@ -135,7 +218,170 @@ body {
   }
 }
 
-.about-bottom {
-  
 
+.about-text span {
+font-size: 20px;
+font-weight: 400;
+color: #614034;
+}
+
+
+/* Styles for Recent News Section */
+
+.recent-news {
+  background-color: beige;
+  padding: 50px 0;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+}
+
+.recent-news .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-family: 'Baskervville', serif;
+  font-size: 2.5em;
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2em;
+  color: brown;
+  margin-bottom: 40px;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-card {
+  
+  width: 30%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.news-content {
+  padding: 20px;
+  background-color: white;
+  
+}
+
+.news-content h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-content p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: brown;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .news-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #553311;
+  /* Warm brown color */
+  color: white;
+  padding: 20px 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+  font-size: 0.9em;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 0.8em;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-contact,
+  .footer-logo,
+  .footer-social {
+    margin-bottom: 10px;
+  }
 }
