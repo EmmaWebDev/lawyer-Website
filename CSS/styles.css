@@ -366,7 +366,9 @@ color: #614034;
 .footer-social img {
   width: 24px;
   height: 24px;
+  filter: brightness(8) invert(1);
 }
+
 
 @media (max-width: 768px) {
   .footer-container {
